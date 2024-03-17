@@ -3,17 +3,17 @@
 export class UpdateTodoDTO{
 
     private constructor(
-        public readonly id?: number,
+        public readonly id: number,
         public readonly text?: string,
         public readonly completedAt?: string
     ){}
 
     get values (){
-        const retunObj: {[key:string]: any} ={};
-        if( this.text ) retunObj.text = this.text;
-        if( this.completedAt ) retunObj.completedAt = this.completedAt;
+        const returnObj: {[key:string]: any} ={};
+        if( this.text ) returnObj.text = this.text;
+        if( this.completedAt ) returnObj.completedAt = this.completedAt;
 
-        return retunObj;
+        return returnObj;
     }
 
     static create(props: { [key:string]: any }): [string?, UpdateTodoDTO?]{
